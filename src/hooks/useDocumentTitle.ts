@@ -1,4 +1,6 @@
-//custom Hook
+// custom Hook
+// hook rules
+// 사용자 정의 Hook은 이름이 use로 시작하는 자바스크립트 함수입니다.
 
 import { useEffect } from "react";
 

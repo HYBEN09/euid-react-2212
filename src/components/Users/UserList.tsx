@@ -1,59 +1,67 @@
-import { useEffect, useState } from "react";
 import axios from "axios";
+import { useEffect, useState } from "react";
+import { IResponseUser, IUser } from "./types";
+import { User } from "./Users";
 
 export function UserList() {
   // 네트워크 요청/응답에 필요한 상태 선언
   // (idle → pending → fulfilled/rejected | loading, error, data)
 
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<null | Error>(null);
+  const [data, setData] = useState<IUser[]>([]);
 
+  //*===============================================================================================
+
+  // 네트워크 요청/응답에 필요한 사이드 이펙트 처리
   useEffect(() => {
     axios
       .get("https://randomuser.me/api/?results=10&nat=BR,RS")
-      .then((response) => {
-        console.log(response);
+      .then(({ data: { results } }: { data: { results: IResponseUser[] } }) => {
+        setData(
+          results.map(
+            ({
+              login: { uuid: id },
+              name: { title, first, last },
+              phone,
+              picture: { large: photo },
+              gender,
+              email,
+              location: { city, country },
+            }: IResponseUser) => {
+              return {
+                id,
+                name: `${title}. ${first} ${last}`,
+                phone,
+                photo,
+                gender,
+                email,
+                city,
+                country,
+              };
+            }
+          )
+        );
       })
-      .catch((error) => {
-        console.log(error);
-      });
+      .catch((error) => setError(error))
+      .finally(() => setLoading(false));
   });
+
+  if (loading) {
+    return <div role="alert">LOADING ......</div>;
+  }
+
+  if (error) {
+    return <div role="alert">{error.message}</div>;
+  }
+
+  //*===============================================================================================
 
   return (
     <ul className="UserList">
-      <li>
-        <figure className="User" lang="en">
-          <img src="pictures" alt="" />
-          <figcaption>
-            <table>
-              <caption>user information description</caption>
-              <tbody>
-                <thead>
-                  <tr>
-                    <th scope="col">id</th>
-                    <th scope="col">name</th>
-                    <th scope="col">email</th>
-                    <th scope="col">phone</th>
-                    <th scope="col">gender</th>
-                    <th scope="col">city</th>
-                    <th scope="col">country</th>
-                  </tr>
-                </thead>
-              </tbody>
-              <tr>
-                <td>data</td>
-                <td>data</td>
-                <td>data</td>
-                <td>data</td>
-                <td>data</td>
-                <td>data</td>
-                <td>data</td>
-              </tr>
-            </table>
-          </figcaption>
-        </figure>
-      </li>
+      {data.map((item) => (
+        <User key={item.id} info={item} />
+      ))}
     </ul>
   );
 }
