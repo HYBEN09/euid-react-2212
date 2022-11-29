@@ -8,15 +8,15 @@
 // -----------------------------------------------------------------------------------------
 
 {
-  let anyting: any = 'anyting';
+  let anything: any = 'anything';
 
-  anyting = 120901;
-  anyting = false;
-  anyting = null;
-  anyting = undefined;
+  anything = 120901;
+  anything = false;
+  anything = null;
+  anything = undefined;
 
-  anyting();
-  anyting.unknownMethod();
+  anything();
+  anything.unknownMethod();
 }
 
 // -----------------------------------------------------------------------------------------
