@@ -36,9 +36,14 @@
   const namesList = ['최수영', '한영주', '박호연'];
 
   // 함수(function type)
-  const sum: (x: number, y: number, printable: boolean) => void | number = (
+
+  type Summebale = (x: number, y: number, printable: boolean) => void | number
+
+  const sum: Summebale = (
     x,
     y,
     printable
   ) => (printable ? console.log(x + y) : x + y);
+
+  const add : Summebale = (a,b,z)=>(z ? console.log( a + b ) : a + b)
 }
