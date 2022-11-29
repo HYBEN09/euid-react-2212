@@ -1,3 +1,3 @@
-export var ListItem = function ListItem(props) {
-  return /*#__PURE__*/React.createElement("li", props);
-};
+const { React } = window;
+export const ListItem = (props) => React.createElement("li", { ...props });
+//# sourceMappingURL=ListItem.js.map

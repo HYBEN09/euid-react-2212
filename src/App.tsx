@@ -1,6 +1,7 @@
 import { List } from "./components/List.js";
+
 const { React } = window;
+
 export default function App() {
-    return React.createElement(List, null);
+  return <List />;
 }
-//# sourceMappingURL=App.js.map
