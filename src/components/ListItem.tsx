@@ -1,1 +1,3 @@
-export const ListItem = (props) => <li {...props} />;
+const { React } = window;
+
+export const ListItem = (props: { [key: string]: any }) => <li {...props} />;
