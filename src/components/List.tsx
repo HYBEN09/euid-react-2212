@@ -1,8 +1,25 @@
 import { ALink } from "./ALink.jsx";
 import { ListItem } from "./ListItem.js";
 
-export class List extends React.Component {
-  constructor(props) {
+const { React } = window;
+
+interface Listitem {
+  id: number;
+  href: string;
+  text: string;
+  isExternal: boolean;
+}
+
+interface Props {}
+
+interface State {
+  listItems: Listitem[];
+}
+
+export class List extends React.Component<Props, State> {
+  state: State;
+
+  constructor(props: Props) {
     super(props);
     this.state = {
       listItems: [
