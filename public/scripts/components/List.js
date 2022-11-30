@@ -1,4 +1,4 @@
-import { ALink } from "./ALink.jsx";
+import { ALink } from "./ALink.js";
 import { ListItem } from "./ListItem.js";
 const { React } = window;
 export class List extends React.Component {
@@ -16,8 +16,8 @@ export class List extends React.Component {
                 },
                 {
                     id: 3,
-                    href: "https://euid.dev",
-                    text: "EUID",
+                    href: "https://naver.com",
+                    text: "Naver",
                     isExternal: true,
                 },
                 {
