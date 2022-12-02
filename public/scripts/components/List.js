@@ -9,8 +9,10 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-import { ALink } from './ALink.js';
-import { ListItem } from './ListItem.js';
+import { ALink } from "./ALink.js";
+import { ListItem } from "./ListItem.js";
+var _window = window,
+  React = _window.React;
 export var List = /*#__PURE__*/function (_React$Component) {
   _inherits(List, _React$Component);
   var _super = _createSuper(List);
@@ -21,23 +23,23 @@ export var List = /*#__PURE__*/function (_React$Component) {
     _this.state = {
       listItems: [{
         id: 1,
-        href: 'https://reactjs.org',
-        text: 'React',
+        href: "https://reactjs.org",
+        text: "React",
         isExternal: true
       }, {
         id: 2,
-        href: 'https://reactnative.dev',
-        text: 'React Native',
+        href: "https://reactnative.dev",
+        text: "React Native",
         isExternal: true
       }, {
         id: 3,
-        href: 'https://euid.dev',
-        text: 'EUID',
+        href: "https://www.electronjs.org",
+        text: "React Electron",
         isExternal: true
       }, {
         id: 4,
-        href: 'https://google.com',
-        text: 'Google',
+        href: "https://google.com",
+        text: "Google",
         isExternal: true
       }]
     };

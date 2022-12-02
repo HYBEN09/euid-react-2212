@@ -2,14 +2,15 @@
   "private": true,
   "name": "react-jsx-babel",
   "version": "1.0.0",
-  "description": "React, Babel을 사용해 프론트엔드 개발에 필요한 환경을 구성합니다.",
+  "description": "React, Babel, TypeScript를 사용해 프론트엔드 개발에 필요한 환경을 구성합니다.",
   "scripts": {
     "dev": "live-server public --host=localhost --port=3000 --no-browser",
-    "compile": "babel src -d public/scripts",
+    "compile": "babel src -d public/scripts -x .ts,.tsx,.js,.jsx",
     "watch": "npm run compile -- --watch"
   },
   "keywords": [
     "babel",
+    "typescript",
     "jsx"
   ],
   "devDependencies": {
@@ -17,6 +18,9 @@
     "@babel/core": "7.20.2",
     "@babel/preset-env": "7.20.2",
     "@babel/preset-react": "7.18.6",
+    "@babel/preset-typescript": "7.18.6",
+    "@types/react": "18.0.25",
+    "@types/react-dom": "18.0.9",
     "live-server": "1.2.2"
   },
   "license": "MIT"
