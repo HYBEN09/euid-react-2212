@@ -1,4 +1,4 @@
-import { List } from "./components/List.js";
+import { List } from "./components/List.jsx";
 
 const { React } = window;
 

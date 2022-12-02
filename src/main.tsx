@@ -1,9 +1,8 @@
-import App from "./App.js";
+import App from "./App.jsx";
 
 const { React, ReactDOM } = window;
 
-const { StrictMode } = React;
-
+const { Component, StrictMode } = React;
 // @ts-ignore
 const { createRoot } = ReactDOM;
 
