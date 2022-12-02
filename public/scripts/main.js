@@ -2,8 +2,8 @@ import App from "./App.js";
 var _window = window,
   React = _window.React,
   ReactDOM = _window.ReactDOM;
-var StrictMode = React.StrictMode;
-
+var Component = React.Component,
+  StrictMode = React.StrictMode;
 // @ts-ignore
 var createRoot = ReactDOM.createRoot;
 var container = document.getElementById("app");
