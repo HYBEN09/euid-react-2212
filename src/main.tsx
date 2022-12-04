@@ -1,6 +1,9 @@
 import { Fragment, StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { App } from "./app";
+import { SassButton, TailwindButton } from "./button";
+
+import "./tailwind.css";
 
 createRoot(document.getElementById("app")! as HTMLDivElement).render(
   <StrictMode>
@@ -12,5 +15,7 @@ createRoot(document.getElementById("app")! as HTMLDivElement).render(
         </Fragment>
       }
     />
+    <SassButton children={"SassButton"} />
+    <TailwindButton children={"TailwindButton"} />
   </StrictMode>
 );
