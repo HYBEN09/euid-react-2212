@@ -9,6 +9,8 @@
     "build": "webpack build --config ./webpack/config.js --env env=prod"
   },
   "dependencies": {
+    "@tailwindcss/nesting": "0.0.0-insiders.565cd3e",
+    "postcss-nesting": "10.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
