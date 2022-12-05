@@ -16,7 +16,7 @@ Webpack 모듈 번들러를 사용해 React 개발 환경을 다음 순서에 �
 - [+] Style, CSS 로더 구성
 - [+] PostCSS 로더 구성
 - [+] Sass 로더 구성
-- [ ] Tailwind CSS 구성
+- [...] Tailwind CSS 구성
 - [ ] SVGR (SVG React) 컴포넌트 구성
 - [ ] 테스트 환경 구성
 - [ ] 환경변수 구성
