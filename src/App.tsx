@@ -1,3 +1,6 @@
+import * as React from "react";
+import { IconComponent } from "./Icon";
+
 import "./styles/App.scss";
 
 interface AppProps {
@@ -10,6 +13,7 @@ export function App({ headline, description }: AppProps): JSX.Element {
     <div className="App">
       <h1 className="App__Headline">{headline}</h1>
       <p>{description}</p>
+      <IconComponent />
     </div>
   );
 }
