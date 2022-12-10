@@ -1,6 +1,6 @@
 import { useId, useState } from "react";
-import type { Props as AppProps } from "./App";
-import "./styles/FormControl.scss";
+import type { Props as AppProps } from "@/app/App";
+import "@/styles/FormControl.scss";
 
 interface Props {
   onUpdate?: ({ headline, description }: AppProps) => void;

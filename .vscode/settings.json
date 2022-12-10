@@ -90,5 +90,6 @@
   "typescript.suggest.paths": true,
   "typescript.suggest.autoImports": true,
   "typescript.suggest.completeFunctionCalls": true,
-  "typescript.updateImportsOnFileMove.enabled": "always"
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "cSpell.words": ["animejs"]
 }

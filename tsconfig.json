@@ -6,6 +6,7 @@
     "jsxImportSource": "react",
     "module": "commonjs",
     "moduleResolution": "node",
+
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
@@ -13,6 +14,7 @@
     "typeRoots": ["node_modules/@types", "src/@types"],
     "resolveJsonModule": true,
     "allowJs": false,
+    "checkJs": false,
     "noEmit": false,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
@@ -21,5 +23,5 @@
     "sourceMap": true
   },
   "include": ["src"],
-  "exclude": ["node_modules", "build"]
+  "exclude": ["node_modules", "build", "webpack"]
 }
