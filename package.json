@@ -15,8 +15,10 @@
   "dependencies": {
     "animejs": "3.2.1",
     "axios": "1.2.1",
+    "classnames": "2.3.2",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-router-dom": "6.5.0"
   },
   "devDependencies": {
     "@babel/core": "7.20.5",
@@ -27,6 +29,7 @@
     "@types/node": "18.11.10",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.9",
+    "@types/react-router-dom": "5.3.3",
     "@typescript-eslint/eslint-plugin": "5.46.0",
     "@typescript-eslint/parser": "5.46.0",
     "autoprefixer": "10.4.13",

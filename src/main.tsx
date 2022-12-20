@@ -1,12 +1,14 @@
 import "@/styles/global.scss";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { App } from "@/app/App";
+import AppRouter from "./AppRouter";
 
-createRoot(document.getElementById("app") as HTMLDivElement).render(
+const container = document.getElementById("app") as HTMLDivElement;
+
+const root = createRoot(container);
+
+root.render(
   <StrictMode>
-    <App />
-    {/* <App headline="React😌 !!" /> */}
-    {/* <App description="React is Interface UI Library 😗" /> */}
+    <AppRouter />
   </StrictMode>
 );
