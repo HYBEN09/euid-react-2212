@@ -63,7 +63,6 @@ export function App({
 
   // React 이벤트 리스너(핸들러) → 콜백(callback)
   // 사이드 이펙트 (실제 DOM에 접근 가능)
-
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const handleUpdateHeadlineAndDescription = ({
     headline,
