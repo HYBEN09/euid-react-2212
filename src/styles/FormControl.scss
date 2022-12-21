@@ -1,0 +1,19 @@
+.FormControls {
+  margin-bottom: 20px;
+  border: 4px solid #e0e0e0;
+  padding: 20px;
+}
+
+.FormControl {
+  @apply flex flex-col items-start;
+
+  input,
+  textarea {
+    @apply border-teal-400 border-4 rounded-md;
+  }
+}
+
+.ButtonSave {
+  @apply bg-teal-500 text-white mt-2 pt-1 pb-2 px-6 rounded-md;
+  line-height: 1;
+}

@@ -1,0 +1,5 @@
+.App {
+  &__Headline {
+    @apply text-3xl font-bold overline;
+  }
+}
