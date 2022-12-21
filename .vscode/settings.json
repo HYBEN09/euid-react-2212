@@ -16,7 +16,8 @@
     }
   },
   "files.associations": {
-    "*.js": "javascriptreact",
+    "*.jsx": "javascriptreact",
+    "*.tsx": "typescriptreact",
     ".browserslistrc": "bat",
     ".prettierrc": "json",
     ".npmrc": "bat"
@@ -75,7 +76,7 @@
   "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
   "javascript.inlayHints.variableTypes.enabled": true,
   "javascript.suggest.autoImports": true,
-  "javascript.suggest.completeFunctionCalls": true,
+  "javascript.suggest.completeFunctionCalls": false,
   "javascript.suggest.paths": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
 
@@ -89,7 +90,7 @@
   "typescript.inlayHints.parameterNames.suppressWhenArgumentMatchesName": true,
   "typescript.suggest.paths": true,
   "typescript.suggest.autoImports": true,
-  "typescript.suggest.completeFunctionCalls": true,
+  "typescript.suggest.completeFunctionCalls": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "cSpell.words": ["animejs"]
 }
