@@ -3,6 +3,7 @@ import classNames from "classnames";
 
 export function AppLink({ className, ...restProps }: LinkProps) {
   return (
+    //? 기본적으로 active클래스 <NavLink>는 활성 상태일 때 구성 요소에 추가됩니다.
     <NavLink
       className={({ isActive }) =>
         classNames(

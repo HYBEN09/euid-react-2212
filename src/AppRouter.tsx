@@ -23,7 +23,9 @@ export default function AppRouter(): JSX.Element {
           />
 
           <Route path="/users">
+            {/* index === path=" " */}
             <Route index element={<UserList />} />
+            {/* 동적 라우팅  ( users/user-cikss ) */}
             <Route path=":userId" element={<UserDetail />} />
           </Route>
         </Routes>
