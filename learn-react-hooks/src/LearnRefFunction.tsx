@@ -73,7 +73,7 @@ export function LearRefFunction() {
             dispatch(incrementCount());
           }}
         >
-          inc
+          increment
         </button>
         <button
           type="button"
@@ -81,7 +81,7 @@ export function LearRefFunction() {
             dispatch(decrementCount());
           }}
         >
-          dec
+          decrement
         </button>
         <button
           type="button"
