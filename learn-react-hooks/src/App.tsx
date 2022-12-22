@@ -1,9 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import "./App.css";
+import { LearnRefClass } from "./LearnRefClass";
+import { LearnRefFunction } from "./LearnRefFunction";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+
+  // 1. DOM요소 참조 ( reference )
+  // 2. state, props는 React 리-렌더링에 영향을 준다. 반면, ref의 기억된 값은 리-렌더링에 영향을 주지 않는다.
+
+  // `ref` prop
+  // callback Ref
+  // React.forwardRef()
+  // React.createRef()
+  // React.useRef()
+
+  // useState vs. useRef
 
   return (
     <div className="App">
@@ -27,8 +40,17 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <div
+        style={{
+          display: "flex",
+          gap: 30,
+        }}
+      >
+        <LearnRefClass />
+        <LearnRefFunction />
+      </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
