@@ -1,13 +1,38 @@
-import { useRef, useState } from "react";
+import { useState, useReducer, useEffect, useRef } from "react";
+import {
+  countReducer,
+  decrementCount,
+  incrementCount,
+  initialCountState,
+  resetCount,
+} from "./features/count";
 
-export function LearnRefFunction() {
-  const [message, setMessage] = useState("React.FC");
+export function LearRefFunction() {
+  const containerRef = useRef<null | HTMLDivElement>(null);
+
+  useEffect(() => {
+    const { current: containerElement } = containerRef;
+    if (containerElement) {
+      containerElement.style.cssText = `
+        padding: 20px;
+        border: 4px solid currentColor;
+        color: #51e7cc;
+      `;
+    }
+  }, []);
+
+  /* -------------------------------------------------------------------------- */
+
+  let pleaseRememberMeRef = useRef<string>("나를 기억해주세요.");
+
+  // console.log("initialization pleaseRememberMe", pleaseRememberMeRef);
+
+  const [message, setMessage] = useState<string>("React.FC");
+  const [countState, dispatch] = useReducer(countReducer, initialCountState);
 
   const handleUpdateState = () => {
-    setMessage((prevMessage) => prevMessage + "😇");
+    setMessage((prevMessage) => prevMessage + "😃");
   };
-
-  let pleaseRememberMeRef = useRef("저를 기억해 주세요.");
 
   const handleUpdateRefData = () => {
     if (pleaseRememberMeRef.current.indexOf("주세요") > -1) {
@@ -23,7 +48,7 @@ export function LearnRefFunction() {
   };
 
   return (
-    <div>
+    <div lang="en" ref={containerRef}>
       <button type="button" onClick={handleUpdateState}>
         update greeting message
       </button>
@@ -32,6 +57,50 @@ export function LearnRefFunction() {
         update remember me message
       </button>
       <p>{pleaseRememberMeRef.current}</p>
+
+      <hr />
+
+      <div
+        style={{
+          display: "flex",
+          gap: 4,
+          marginBottom: 20,
+        }}
+      >
+        <button
+          type="button"
+          onClick={() => {
+            dispatch(incrementCount());
+          }}
+        >
+          inc
+        </button>
+        <button
+          type="button"
+          onClick={() => {
+            dispatch(decrementCount());
+          }}
+        >
+          dec
+        </button>
+        <button
+          type="button"
+          onClick={() => {
+            dispatch(resetCount());
+          }}
+        >
+          reset
+        </button>
+      </div>
+
+      <output
+        style={{
+          fontSize: 40,
+          fontWeight: 700,
+        }}
+      >
+        {countState.count}
+      </output>
     </div>
   );
 }

@@ -2,7 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
 import { LearnRefClass } from "./LearnRefClass";
-import { LearnRefFunction } from "./LearnRefFunction";
+import { LearRefFunction } from "./LearnRefFunction";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -47,7 +47,7 @@ function App() {
         }}
       >
         <LearnRefClass />
-        <LearnRefFunction />
+        <LearRefFunction />
       </div>
     </div>
   );
